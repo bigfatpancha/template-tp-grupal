@@ -1,4 +1,5 @@
-package ar.fiuba.tdd.tp;
+package ar.fiuba.tdd.tp.client;
+
 
 import java.io.*;
 import java.net.Socket;
@@ -11,8 +12,8 @@ public class Client {
     public static void main(String args[]) {
         String serverName = args[0];
         int port = Integer.parseInt(args[1]);
-        try
-        {
+
+        try {
             System.out.println("Connecting to " + serverName +
                     " on port " + port);
             Socket client = new Socket(serverName, port);
@@ -27,8 +28,8 @@ public class Client {
                     new DataInputStream(inFromServer);
             System.out.println("Server says " + in.readUTF());
             client.close();
-        }catch(IOException e)
-        {
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
