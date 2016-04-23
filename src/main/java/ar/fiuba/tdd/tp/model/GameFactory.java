@@ -1,4 +1,4 @@
-package ar.fiuba.tdd.tp.gameModel;
+package ar.fiuba.tdd.tp.model;
 
 /**
  * Created by mariagustina on 23/04/16.

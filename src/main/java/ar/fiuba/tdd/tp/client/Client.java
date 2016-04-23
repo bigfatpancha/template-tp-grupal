@@ -11,15 +11,14 @@ import java.net.Socket;
  */
 public class Client {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //TODO: pasarlo por argumento
-        String serverName = "0.0.0.0";//args[0];
+        String serverName = "localhost";//args[0];
         int port = 4444; //Integer.parseInt(args[1]);
 
         try {
-            System.out.println("Connecting to " + serverName +
-                    " on port " + port);
+            System.out.println("Connecting to " + serverName + " on port " + port);
 
             Socket client = new Socket(serverName, port);
 
