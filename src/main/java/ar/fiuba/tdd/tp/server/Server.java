@@ -48,6 +48,7 @@ public class Server extends Thread {
 
 
     public static void main(String [] args) {
+        System.out.println("Main server");
         int port = Integer.parseInt(args[0]);
 
         try {
