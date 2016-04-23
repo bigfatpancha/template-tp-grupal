@@ -1,13 +1,14 @@
 package ar.fiuba.tdd.tp.server;
 
 
+import ar.fiuba.tdd.tp.UserInteracter.UserInteracter;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
-import java.util.Scanner;
 
 /*
  * Created by Lucía on 16/4/2016.
