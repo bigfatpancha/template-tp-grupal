@@ -12,8 +12,10 @@ import java.net.Socket;
 public class Client {
 
     public static void main(String args[]) {
-        String serverName = args[0];
-        int port = Integer.parseInt(args[1]);
+
+        //TODO: pasarlo por argumento
+        String serverName = "0.0.0.0";//args[0];
+        int port = 4444; //Integer.parseInt(args[1]);
 
         try {
             System.out.println("Connecting to " + serverName +
