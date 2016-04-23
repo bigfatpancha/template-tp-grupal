@@ -1,6 +1,7 @@
 # TP Grupal - Primera Entrega
 Testing integration
-Travis integration https://travis-ci.org/bigfatpancha/template-tp-grupal.svg?branch=develop
+Travis integration
+![Build Status](https://travis-ci.org/bigfatpancha/template-tp-grupal.svg?branch=develop)
 
 ## Enunciado ##
 
