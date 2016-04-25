@@ -1,0 +1,7 @@
+{
+  "UserEvents": {
+    "event1": "look around",
+    "event2": "pick stick"
+  },
+  "GameLogic": "inOrder" //esto de game logic no estoy segura si dejarlo o no
+}
