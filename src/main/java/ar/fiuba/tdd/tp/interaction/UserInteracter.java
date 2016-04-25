@@ -16,7 +16,9 @@ public class UserInteracter {
 
     public final String inputGame() {
           // Reading from System.in
-        System.out.println("Bienvenidos! A continuacion ingrese el comando <load game “juego”> para iniciar alguno de los juegos disponibles");
+        System.out.println("Bienvenidos! A continuacion ingrese el "
+                +
+                "comando <load game [juego]> para iniciar alguno de los juegos disponibles");
         return this.reader.nextLine();
     }
 
