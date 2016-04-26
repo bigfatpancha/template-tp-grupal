@@ -6,8 +6,8 @@ package ar.fiuba.tdd.tp.model;
 public class FetchQuestCreator extends GameCreator {
 
     @Override
-    public Game crateGame(String gameName) {
+    public Game crateGame() {
 
-        return new FetchQuestGame(gameName);
+        return new FetchQuestGame();
     }
 }

@@ -1,11 +1,10 @@
 package ar.fiuba.tdd.tp.model;
 
 /**
- * Created by Lucía on 24/4/2016.
+ * Created by samiloiza on 25/04/16.
  */
-public class FetchQuestGame extends Game {
-
-    public FetchQuestGame() {
+public class HanoiTower extends Game {
+    public HanoiTower() {
         super();
     }
 
