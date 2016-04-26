@@ -10,7 +10,7 @@ public abstract class Game {
     public GameRules gameRules;
     public  String lastUserEvent;
 
-    public Game(String gameName) {
+    public Game() {
 
         this.gameRules = new GameRules();
 

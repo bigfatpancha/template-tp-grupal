@@ -12,4 +12,12 @@ public class DamnObject extends Game {
     public Game loadRules(String gameName) {
         return super.loadRules(gameName);
     }
+
+    public  void continueGame() {
+        //TODO
+    }
+
+    public  void consultGameRules() {
+        //TODO
+    }
 }
