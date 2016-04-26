@@ -5,7 +5,7 @@ package ar.fiuba.tdd.tp.model;
  */
 public class OpenDoorCreator extends GameCreator {
     @Override
-    public Game crateGame() {
+    public Game createGame() {
 
         return new OpenDoor();
     }

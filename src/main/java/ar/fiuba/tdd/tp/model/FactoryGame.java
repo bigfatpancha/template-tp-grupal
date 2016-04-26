@@ -8,16 +8,15 @@ public class FactoryGame {
     public static GameCreator getFactory(String gameName) {
 
         if (gameName.equalsIgnoreCase("fetch quest")) {
-            return new HanoiTowerCreator();
-
+            return new FetchQuestCreator();
         } else if (gameName.equalsIgnoreCase("abrir puerta")) {
             return new OpenDoorCreator();
         } else if (gameName.equalsIgnoreCase("torres de hanoi")) {
-            return new FetchQuestCreator();
+            return new HanoiTowerCreator();
         } else if (gameName.equalsIgnoreCase("objeto maldito")) {
             return new DamnObjectCreator();
         } else {
-            return null;
+            return new FetchQuestCreator();
         }
 
     }

@@ -6,7 +6,7 @@ package ar.fiuba.tdd.tp.model;
 public class DamnObjectCreator extends GameCreator {
     @Override
 
-    public Game crateGame() {
+    public Game createGame() {
 
         return new DamnObject();
     }

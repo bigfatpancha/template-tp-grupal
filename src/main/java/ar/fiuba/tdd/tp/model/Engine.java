@@ -12,7 +12,7 @@ public class Engine {
     public Engine(String gameName) {
         this.gameName = gameName;
         GameCreator creator = FactoryGame.getFactory(gameName);
-        this.game = creator.crateGame();
+        this.game = creator.createGame();
 
     }
 
