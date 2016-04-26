@@ -13,11 +13,11 @@ public class HanoiTower extends Game {
         return super.loadRules(gameName);
     }
 
-    public  void continueGame() {
-        //TODO
+    public void continueGame() {
+        System.out.println("continue Game Hanoi");
     }
 
-    public  void consultGameRules() {
-        //TODO
+    public void consultGameRules() {
+       //T System.out.println("consult Hanoi");
     }
 }

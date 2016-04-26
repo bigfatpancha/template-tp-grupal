@@ -13,11 +13,13 @@ public class DamnObject extends Game {
         return super.loadRules(gameName);
     }
 
-    public  void continueGame() {
+
+    public void continueGame() {
         //TODO
     }
 
-    public  void consultGameRules() {
+    public void consultGameRules() {
         //TODO
     }
 }
+

@@ -17,10 +17,10 @@ public class FetchQuestGame extends Game {
     }
 
     public void continueGame() {
-        System.out.println(this.lastUserEvent);
+        //TODO
     }
 
     public void consultGameRules() {
-
+        //TODO
     }
 }

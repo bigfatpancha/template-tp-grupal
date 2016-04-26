@@ -15,11 +15,12 @@ public class OpenDoor extends Game {
 
     }
 
-    public  void continueGame() {
+    public void continueGame() {
         //TODO
     }
 
-    public  void consultGameRules() {
+    public void consultGameRules() {
         //TODO
     }
+
 }

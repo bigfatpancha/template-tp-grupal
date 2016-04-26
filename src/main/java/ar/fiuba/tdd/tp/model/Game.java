@@ -7,13 +7,20 @@ import ar.fiuba.tdd.tp.interaction.UserInteracter;
  */
 public abstract class Game {
 
-    public GameRules gameRules;
-    public  String lastUserEvent;
+    private GameRules gameRules;
+    private String lastUserEvent;
 
     public Game() {
-
         this.gameRules = new GameRules();
 
+    }
+
+    public void setGameRules(GameRules gameRules) {
+        this.gameRules = gameRules;
+    }
+
+    public GameRules getGameRules() {
+        return this.gameRules;
     }
 
     public Game loadRules(String gameName) {
@@ -29,6 +36,7 @@ public abstract class Game {
     public void startGame() {
         UserInteracter interacter = new UserInteracter();
         this.lastUserEvent = interacter.handleUserEvent();
+        System.out.println(this.lastUserEvent);
     }
 
     public abstract void continueGame();
