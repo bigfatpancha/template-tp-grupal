@@ -12,4 +12,12 @@ public class HanoiTower extends Game {
     public Game loadRules(String gameName) {
         return super.loadRules(gameName);
     }
+
+    public void continueGame() {
+        System.out.println("continue Game Hanoi");
+    }
+
+    public void consultGameRules() {
+       //T System.out.println("consult Hanoi");
+    }
 }
