@@ -6,19 +6,31 @@ package ar.fiuba.tdd.tp.model;
 public class Engine {
 
     private Game game;
+    private String gameName;
     //TODO la variable gameCreator no deberia ser de esta clase, deberia ser un singleton o algo gobal
-    private GameCreator gameCreator = new FetchQuestCreator();
 
     public Engine(String gameName) {
-        this.game = gameCreator.crateGame(gameName);
+        this.gameName = gameName;
+        GameCreator creator = FactoryGame.getFactory(gameName);
+        this.game = creator.createGame();
+
     }
 
-    public Game loadGame() {
-        return this.game;
+    public void loadGame() {
+        this.game.loadRules(this.gameName);
     }
 
     public void run() {
+        this.loadGame();
         System.out.println("Running");
+
+        /*aca deberiamos hacer tod o lo que
+        tienen en comun todos los juegos
+         */
+
+        this.game.giveFirstMessage();
+        this.game.startGame();
+        this.game.continueGame();
     }
 
 }

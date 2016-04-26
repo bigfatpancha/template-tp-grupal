@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class UserInteracter {
 
+    //TODO: hacerlo singleton
     private Scanner reader;
 
     public UserInteracter() {
@@ -24,13 +25,36 @@ public class UserInteracter {
 
     public void handleCLientInteraction() {
         String input = this.reader.nextLine();
+
         if (input.equals("exit game")) {
             return;
         }
 
         if (input.equals("help")) {
+
             //TODO: Mostrar ayuda del juego
             System.out.println("Game helper");
+            return;
+
         }
+    }
+
+    public String handleUserEvent() {
+        System.out.println("Esperando al control de usuario");
+
+        String input = this.reader.nextLine();
+        return input;
+    }
+
+    public void printControllersGame() {
+        //TODO: en el json ponerle una descripcion con los controles que sean necesarios, lo dejo hardcodeado por ahora
+        System.out.println("Bienvenidos al juego FetchQuest! "
+                +
+                "los controles para el juego son: \n"
+                +
+                 "q: look around \n"
+                +
+                 "w: pick stick \n");
+
     }
 }

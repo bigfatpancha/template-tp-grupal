@@ -1,19 +1,18 @@
 package ar.fiuba.tdd.tp.model;
 
 /**
- * Created by Lucía on 24/4/2016.
+ * Created by samiloiza on 25/04/16.
  */
+public class OpenDoor extends Game {
 
-public class FetchQuestGame extends Game {
-
-    public FetchQuestGame() {
+    public OpenDoor() {
         super();
     }
 
     @Override
     public Game loadRules(String gameName) {
         return super.loadRules(gameName);
-        // private List<String> userListEvents;
+
     }
 
     public void continueGame() {
@@ -23,4 +22,5 @@ public class FetchQuestGame extends Game {
     public void consultGameRules() {
         //TODO
     }
+
 }

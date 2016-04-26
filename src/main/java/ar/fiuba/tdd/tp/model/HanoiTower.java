@@ -1,26 +1,23 @@
 package ar.fiuba.tdd.tp.model;
 
 /**
- * Created by Lucía on 24/4/2016.
+ * Created by samiloiza on 25/04/16.
  */
-
-public class FetchQuestGame extends Game {
-
-    public FetchQuestGame() {
+public class HanoiTower extends Game {
+    public HanoiTower() {
         super();
     }
 
     @Override
     public Game loadRules(String gameName) {
         return super.loadRules(gameName);
-        // private List<String> userListEvents;
     }
 
     public void continueGame() {
-        //TODO
+        System.out.println("continue Game Hanoi");
     }
 
     public void consultGameRules() {
-        //TODO
+       //T System.out.println("consult Hanoi");
     }
 }
