@@ -19,6 +19,14 @@ public class Engine {
 
     public void run() {
         System.out.println("Running");
+
+        /*aca deberiamos hacer tod o lo que
+        tienen en comun todos los juegos
+         */
+
+        this.game.giveFirstMessage();
+        this.game.startGame();
+        this.game.continueGame();
     }
 
 }
