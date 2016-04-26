@@ -5,32 +5,24 @@ import java.util.Scanner;
 /*
  * Created by mariagustina on 23/04/16.
  */
-public class UserInteracter {
+public class UserInteractor {
 
-    //TODO: hacerlo singleton
     private Scanner reader;
 
-    private UserInteracter() {
+    private UserInteractor() {
         this.reader = new Scanner(System.in, "UTF-8");
     }
 
     private static class UserInteracterHolder {
-        private static final UserInteracter INSTANCE = new UserInteracter();
+        private static final UserInteractor INSTANCE = new UserInteractor();
     }
 
-    public static UserInteracter getInstance() {
+    public static UserInteractor getInstance() {
         return UserInteracterHolder.INSTANCE;
     }
 
-    public final String inputGame() {
-        // Reading from System.in
-        System.out.println("Bienvenidos! A continuacion ingrese el "
-                +
-                "comando <load game [juego]> para iniciar alguno de los juegos disponibles: ");
-        return this.reader.nextLine();
-    }
 
-    public void handleCLientInteraction() {
+    public void handleClientInteraction() {
         String input = this.reader.nextLine();
 
         if (input.equals("exit game")) {
@@ -59,9 +51,9 @@ public class UserInteracter {
                 +
                 "los controles para el juego son: \n"
                 +
-                 "q: look around \n"
+                "q: look around \n"
                 +
-                 "w: pick stick \n");
+                "w: pick stick \n");
 
     }
 }

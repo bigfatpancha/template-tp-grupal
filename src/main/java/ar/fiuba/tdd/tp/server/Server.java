@@ -1,7 +1,7 @@
 package ar.fiuba.tdd.tp.server;
 
 
-import ar.fiuba.tdd.tp.interaction.UserInteracter;
+import ar.fiuba.tdd.tp.interaction.AdminServerInteractor;
 import ar.fiuba.tdd.tp.model.Engine;
 
 import java.io.DataInputStream;
@@ -59,17 +59,14 @@ public class Server extends Thread {
 
     public static void main(String[] args) {
         //TODO: PASARESLO POR PARAMETRO
-        UserInteracter userInteracter = UserInteracter.getInstance();
-        String inputGame = userInteracter.inputGame();
+        AdminServerInteractor adminServerInteractor = AdminServerInteractor.getInstance();
+        String inputGame = adminServerInteractor.handleAdminEvent();
 
         //TODO: poner los distintos juegos para que los cargue y que lo valide en el string, ponerlo en un loop
         if (!inputGame.equals("load game")) {
             System.out.println("Lo sentimos, usted ha ingresado un juego invalido");
             return;
         }
-
-        Engine motor = new Engine(inputGame);
-        motor.run();
 
         int port = 4444; //Integer.parseInt(args[0]);
         try {

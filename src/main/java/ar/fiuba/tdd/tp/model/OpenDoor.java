@@ -15,6 +15,11 @@ public class OpenDoor extends Game {
 
     }
 
+/*    @Override
+    public String processMessage(String message) {
+        return "OpenDoor:" + message;
+    }
+*/
     public void continueGame() {
         //TODO
     }

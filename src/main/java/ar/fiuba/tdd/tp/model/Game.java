@@ -1,6 +1,6 @@
 package ar.fiuba.tdd.tp.model;
 
-import ar.fiuba.tdd.tp.interaction.UserInteracter;
+import ar.fiuba.tdd.tp.interaction.UserInteractor;
 
 /**
  * Created by mariagustina on 23/04/16.
@@ -29,14 +29,18 @@ public abstract class Game {
     }
 
     public void giveFirstMessage() {
-        UserInteracter interacter = UserInteracter.getInstance();
+        UserInteractor interacter = UserInteractor.getInstance();
         interacter.printControllersGame();
     }
 
     public void startGame() {
-        UserInteracter interacter = UserInteracter.getInstance();
+        UserInteractor interacter = UserInteractor.getInstance();
         this.lastUserEvent = interacter.handleUserEvent();
         System.out.println(this.lastUserEvent);
+    }
+
+    public String processMessage(String message) {
+        return "Game process" + message;
     }
 
     public abstract void continueGame();
