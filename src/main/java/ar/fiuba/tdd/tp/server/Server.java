@@ -59,7 +59,7 @@ public class Server extends Thread {
 
     public static void main(String[] args) {
         //TODO: PASARESLO POR PARAMETRO
-        UserInteracter userInteracter = new UserInteracter();
+        UserInteracter userInteracter = UserInteracter.getInstance();
         String inputGame = userInteracter.inputGame();
 
         //TODO: poner los distintos juegos para que los cargue y que lo valide en el string, ponerlo en un loop

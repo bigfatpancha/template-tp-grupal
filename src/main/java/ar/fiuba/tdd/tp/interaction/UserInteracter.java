@@ -10,16 +10,23 @@ public class UserInteracter {
     //TODO: hacerlo singleton
     private Scanner reader;
 
-    public UserInteracter() {
-
+    private UserInteracter() {
         this.reader = new Scanner(System.in, "UTF-8");
     }
 
+    private static class UserInteracterHolder {
+        private static final UserInteracter INSTANCE = new UserInteracter();
+    }
+
+    public static UserInteracter getInstance() {
+        return UserInteracterHolder.INSTANCE;
+    }
+
     public final String inputGame() {
-          // Reading from System.in
+        // Reading from System.in
         System.out.println("Bienvenidos! A continuacion ingrese el "
                 +
-                "comando <load game [juego]> para iniciar alguno de los juegos disponibles");
+                "comando <load game [juego]> para iniciar alguno de los juegos disponibles: ");
         return this.reader.nextLine();
     }
 

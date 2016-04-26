@@ -29,12 +29,12 @@ public abstract class Game {
     }
 
     public void giveFirstMessage() {
-        UserInteracter interacter = new UserInteracter();
+        UserInteracter interacter = UserInteracter.getInstance();
         interacter.printControllersGame();
     }
 
     public void startGame() {
-        UserInteracter interacter = new UserInteracter();
+        UserInteracter interacter = UserInteracter.getInstance();
         this.lastUserEvent = interacter.handleUserEvent();
         System.out.println(this.lastUserEvent);
     }
