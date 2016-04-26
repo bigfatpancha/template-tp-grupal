@@ -13,8 +13,12 @@ public abstract class Game {
     public Game(String gameName) {
 
         this.gameRules = new GameRules();
-        this.gameRules.load(gameName);
 
+    }
+
+    public Game loadRules(String gameName) {
+        this.gameRules.load(gameName);
+        return this;
     }
 
     public void giveFirstMessage() {

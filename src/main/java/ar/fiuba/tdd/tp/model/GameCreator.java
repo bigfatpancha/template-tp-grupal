@@ -5,6 +5,6 @@ package ar.fiuba.tdd.tp.model;
  */
 public abstract class GameCreator {
 
-    public abstract Game crateGame(String gameName);
+    public abstract Game createGame();
 
 }

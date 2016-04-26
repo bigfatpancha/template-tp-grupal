@@ -6,6 +6,13 @@ package ar.fiuba.tdd.tp.model;
 
 public class FetchQuestGame extends Game {
 
+    public FetchQuestGame() {
+        super();
+    }
+
+    @Override
+    public Game loadRules(String gameName) {
+        return super.loadRules(gameName);
    // private List<String> userListEvents;
 
     public FetchQuestGame(String gameName) {
