@@ -1,0 +1,37 @@
+{
+  // GAME
+  "id": "game1",
+  "initialPlaceId" : "room1",
+  "childs" : [
+    // PLACES
+    {
+      "id": "room1",
+      "childs" : [
+        // OBJECTS
+        {
+          "id" : "key",
+          "childs" : [ "use", "drop"]
+        },
+        {
+          "id" : "key",
+          "childs" : [ "use", "drop"]
+        }
+
+      ]
+    },
+    {
+      "id": "room2",
+      "childs" : [
+        {
+          "id" : "key",
+          "childs" : [ "use", "drop"]
+        },
+        {
+          "id" : "key",
+          "childs" : [ "use", "drop"]
+        }
+      ]
+    }
+  ]
+
+}
