@@ -7,6 +7,7 @@ import ar.fiuba.tdd.tp.model.creators.EngineCreator;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by Martín on 26/04/2016.
  */
@@ -15,7 +16,7 @@ public class MainServer {
     private List<Engine> engines;
 
     public MainServer() {
-        this.engines = new ArrayList<>();
+        this.engines = new ArrayList<Engine>();
     }
 
     public void addEngine(Engine engine) {
