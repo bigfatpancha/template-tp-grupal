@@ -23,7 +23,7 @@ public class JsonReader {
 
         try {
 
-            String path = "/home/pablo/Documents/FIUBA/7510-TdD/workspace/template-tp-grupal/src/configFiles/gameConf.json";
+            String path = System.getProperty("user.dir")+"/src/configFiles/gameConf.json";
             InputStreamReader jsonFile = new InputStreamReader(new FileInputStream(path), "UTF-8");
 
             Game gameConf = gson.fromJson(jsonFile, Game.class);
