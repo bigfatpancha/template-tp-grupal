@@ -13,6 +13,7 @@ public class GameObject extends GameEntity {
 
     public GameObject() {
         this.setId("");
+        this.setPlace("");
         this.actions = new ArrayList<String>();
     }
 

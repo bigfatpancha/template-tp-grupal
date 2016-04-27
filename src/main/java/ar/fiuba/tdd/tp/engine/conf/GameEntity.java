@@ -7,6 +7,8 @@ public abstract class GameEntity {
 
     private String id;
 
+    private String place;
+
 
     public String getId() {
         return this.id;
@@ -16,6 +18,13 @@ public abstract class GameEntity {
         this.id = id;
     }
 
+    public String getPlace() {
+        return this.place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -27,7 +36,7 @@ public abstract class GameEntity {
             return false;
         }
 
-        GamePlace gamePlace = (GamePlace) o;
+        GameEntity gamePlace = (GameEntity) o;
 
         return this.getId().equals(gamePlace.getId());
     }

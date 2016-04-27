@@ -12,6 +12,7 @@
   "objects" : [
     {
       "id": "key",
+      "place" : "room1",
       "actions" : [
         "pick",
         "drop"
@@ -19,6 +20,7 @@
     },
     {
       "id": "door",
+      "place" : "room1",
       "actions" : [
         "open",
         "close"
@@ -27,7 +29,8 @@
   ],
   "characters" : [
     {
-      "id": "me"
+      "id": "me",
+      "place" : "room1"
     }
   ]
 

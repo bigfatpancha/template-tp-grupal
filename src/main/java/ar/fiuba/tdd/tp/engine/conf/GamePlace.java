@@ -1,15 +1,23 @@
 package ar.fiuba.tdd.tp.engine.conf;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by pablo on 4/25/16.
  */
-public class GamePlace extends GameEntity {
+public class GamePlace {
+
+    private String id;
 
     public GamePlace() {
-        this.setId("");
+        this.id = "";
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }
