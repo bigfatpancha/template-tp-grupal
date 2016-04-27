@@ -12,7 +12,7 @@ public class JsonReaderExample {
     public static void main(String[] args) {
 
         try {
-            Game game = GameConfigurationReader.getInstance().readGameConfiguration("gameConf");
+            GameConfigurationReader.getInstance().readGameConfiguration("gameConf");
             System.out.println("Configuracion del juego leida exitosamente!");
         } catch (GameNotFoundException e) {
             e.printStackTrace();

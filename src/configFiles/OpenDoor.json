@@ -1,0 +1,35 @@
+{
+  "id": "OpenDoor",
+
+  "places" : [
+    {
+      "id": "room1"
+    },
+    {
+      "id": "room2"
+    }
+  ],
+  "objects" : [
+    {
+      "id": "key",
+      "actions" : [
+        "pick",
+        "drop"
+      ]
+    },
+    {
+      "id": "door",
+      "actions" : [
+        "open",
+        "close"
+      ]
+    }
+  ],
+  "characters" : [
+    {
+      "id": "me"
+    }
+  ]
+
+
+}
