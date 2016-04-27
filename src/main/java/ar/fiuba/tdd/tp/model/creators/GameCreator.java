@@ -1,4 +1,6 @@
-package ar.fiuba.tdd.tp.model;
+package ar.fiuba.tdd.tp.model.creators;
+
+import ar.fiuba.tdd.tp.model.Game;
 
 /**
  * Created by mariagustina on 23/04/16.

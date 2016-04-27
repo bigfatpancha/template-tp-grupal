@@ -16,6 +16,12 @@ public class FetchQuestGame extends Game {
         // private List<String> userListEvents;
     }
 
+    /*
+        @Override
+        public String processMessage(String message) {
+            return "FetchQuest:" + message;
+        }
+    */
     public void continueGame() {
         //TODO
     }

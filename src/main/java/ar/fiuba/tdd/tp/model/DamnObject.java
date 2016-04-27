@@ -13,6 +13,12 @@ public class DamnObject extends Game {
         return super.loadRules(gameName);
     }
 
+    /*
+    @Override
+    public String processMessage(String message) {
+        return "DamnObject:" + message;
+    }
+    */
 
     public void continueGame() {
         //TODO

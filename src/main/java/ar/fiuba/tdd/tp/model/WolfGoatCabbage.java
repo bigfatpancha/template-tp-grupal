@@ -1,31 +1,25 @@
 package ar.fiuba.tdd.tp.model;
 
 /**
- * Created by samiloiza on 25/04/16.
+ * Created by Lucía on 27/4/2016.
  */
-public class OpenDoor extends Game {
-
-    public OpenDoor() {
+public class WolfGoatCabbage extends Game {
+    public WolfGoatCabbage() {
         super();
     }
 
     @Override
     public Game loadRules(String gameName) {
         return super.loadRules(gameName);
-
     }
 
-/*    @Override
-    public String processMessage(String message) {
-        return "OpenDoor:" + message;
-    }
-*/
+    @Override
     public void continueGame() {
         //TODO
     }
 
+    @Override
     public void consultGameRules() {
         //TODO
     }
-
 }
