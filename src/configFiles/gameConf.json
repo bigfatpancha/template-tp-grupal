@@ -2,7 +2,6 @@
   "id": "game1",
 
   "places" : [
-    // PLACES
     {
       "id": "room1"
     },
@@ -12,18 +11,23 @@
   ],
   "objects" : [
     {
-      "id": "obj1"
+      "id": "key",
+      "actions" : [
+        "pick",
+        "drop"
+      ]
     },
     {
-      "id": "obj2"
+      "id": "door",
+      "actions" : [
+        "open",
+        "close"
+      ]
     }
   ],
-  "subjects" : [
+  "characters" : [
     {
-      "id": "subj1"
-    },
-    {
-      "id": "subj2"
+      "id": "me"
     }
   ]
 

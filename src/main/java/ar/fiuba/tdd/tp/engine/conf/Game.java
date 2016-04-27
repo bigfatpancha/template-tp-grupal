@@ -12,7 +12,7 @@ public class Game {
 
     private List<GamePlace> places;
 
-    private List<String> subjects;
+    private List<GameCharacter> characters;
 
     private List<GameObject> objects;
 
@@ -20,7 +20,7 @@ public class Game {
     public Game() {
         this.gameName = "";
         this.places = new ArrayList<GamePlace>();
-        this.subjects = new ArrayList<String>();
+        this.characters = new ArrayList<GameCharacter>();
     }
 
 
@@ -30,6 +30,14 @@ public class Game {
 
     public void setGameName(String gameName) {
         this.gameName = gameName;
+    }
+
+    public List<GameCharacter> getCharacters() {
+        return this.characters;
+    }
+
+    public void setCharacters(List<GameCharacter> characters) {
+        this.characters = characters;
     }
 
     public List<GameObject> getObjects() {
@@ -48,13 +56,6 @@ public class Game {
         this.places = places;
     }
 
-    public List<String> getSubjects() {
-        return this.subjects;
-    }
-
-    public void setSubjects(List<String> subjects) {
-        this.subjects = subjects;
-    }
 
 
 }
