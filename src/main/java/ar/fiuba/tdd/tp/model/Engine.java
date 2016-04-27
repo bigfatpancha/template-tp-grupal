@@ -81,7 +81,8 @@ public class Engine extends Thread {
         }
     }
 
-    private String readRequest() throws IOException, ClassNotFoundException {return inStream.readUTF();
+    private String readRequest() throws IOException, ClassNotFoundException {
+        return inStream.readUTF();
     }
 
     private void sendResponse(String message) throws IOException {

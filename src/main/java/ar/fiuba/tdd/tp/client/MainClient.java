@@ -85,13 +85,13 @@ public class MainClient {
 
     private String sendAndReceive() throws IOException {
         // FIXME by nahuesosa No me toma lo que ingreso por consola y no se xq.
-/*        while (!scanner.hasNextLine()){ */
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-/*        }
+        /*        while (!scanner.hasNextLine()){ */
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        /*        }
         String requestMessage = scanner.nextLine(); */
         String requestMessage = "Mensaje Hardcodeado en Cliente (FIXME)";
         outStream.writeUTF(requestMessage);

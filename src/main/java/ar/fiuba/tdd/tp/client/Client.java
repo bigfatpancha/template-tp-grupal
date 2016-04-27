@@ -33,8 +33,7 @@ public class Client {
                     + client.getLocalSocketAddress());
             InputStream inFromServer = client.getInputStream();
 
-            DataInputStream in =
-                    new DataInputStream(inFromServer);
+            DataInputStream in = new DataInputStream(inFromServer);
 
             System.out.println("Server says " + in.readUTF());
             client.close();
