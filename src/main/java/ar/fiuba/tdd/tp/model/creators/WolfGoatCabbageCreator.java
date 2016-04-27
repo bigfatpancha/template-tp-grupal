@@ -1,7 +1,6 @@
 package ar.fiuba.tdd.tp.model.creators;
 
 import ar.fiuba.tdd.tp.model.Game;
-import ar.fiuba.tdd.tp.model.GameCreator;
 import ar.fiuba.tdd.tp.model.WolfGoatCabbage;
 
 /**
