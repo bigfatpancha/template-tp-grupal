@@ -59,11 +59,8 @@ public class Server extends Thread {
     public static void main(String[] args) {
         //TODO: PASARESLO POR PARAMETRO
         AdminServerInteractor adminServerInteractor = AdminServerInteractor.getInstance();
-        adminServerInteractor.welcome();
         String inputGame = adminServerInteractor.handleAdminEvent();
 
-
-        System.out.println("Usted ha cargado el juego: ");
         System.out.println(inputGame);
 
         int port = 4444; //Integer.parseInt(args[0]);

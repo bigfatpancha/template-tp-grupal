@@ -37,7 +37,7 @@ public class AdminServerInteractor {
             input = this.reader.nextLine();
             parsedStr = input.split(" ");
         }
-        //TODO: poner los distintos juegos para que los cargue y que lo valide en el string
+        
         return parsedStr[2];
     }
 
