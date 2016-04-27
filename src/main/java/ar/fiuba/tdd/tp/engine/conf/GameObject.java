@@ -1,27 +1,19 @@
 package ar.fiuba.tdd.tp.engine.conf;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by pablo on 4/25/16.
  */
-public class GameObjectConfiguration extends GameConfiguration<String> {
-/*
-    private String objectId;
+public class GameObject extends GameEntity {
 
     private List<String> actions;
 
 
-    public GameObjectConfiguration() {
-        this.objectId = "";
+    public GameObject() {
+        this.setId("");
         this.actions = new ArrayList<String>();
-    }
-
-
-    public String getObjectId() {
-        return this.objectId;
-    }
-
-    public void setObjectId(String objectId) {
-        this.objectId = objectId;
     }
 
     public List<String> getActions() {
@@ -31,9 +23,9 @@ public class GameObjectConfiguration extends GameConfiguration<String> {
     public void setActions(List<String> actions) {
         this.actions = actions;
     }
-*/
+
     public boolean isActionAllowed(String action) {
-        return this.getChilds().contains(action);
+        return this.getActions().contains(action);
     }
 
 }

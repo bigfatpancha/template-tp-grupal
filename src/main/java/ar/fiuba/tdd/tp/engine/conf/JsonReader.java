@@ -19,14 +19,14 @@ public class JsonReader {
 
 
         System.out.println("JSON READER INIT");
-/*        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
 
         try {
 
-            String path = "configFiles/gameConf.json";
+            String path = "/home/pablo/Documents/FIUBA/7510-TdD/workspace/template-tp-grupal/src/configFiles/gameConf.json";
             InputStreamReader jsonFile = new InputStreamReader(new FileInputStream(path), "UTF-8");
 
-            GameRootConfiguration gameConf = gson.fromJson(jsonFile, GameRootConfiguration.class);
+            Game gameConf = gson.fromJson(jsonFile, Game.class);
             if (gameConf != null) {
                 System.out.println("JSON READER SUCCESSFUL");
             }
@@ -36,7 +36,7 @@ public class JsonReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-*/
+
     }
 
 
