@@ -1,6 +1,4 @@
-package ar.fiuba.tdd.tp.engine.conf;
-
-import java.util.ArrayList;
+package ar.fiuba.tdd.tp.engine.model;
 
 /**
  * Created by pablo on 4/27/16.

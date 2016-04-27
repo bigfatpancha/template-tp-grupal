@@ -1,4 +1,4 @@
-package ar.fiuba.tdd.tp.engine.conf;
+package ar.fiuba.tdd.tp.engine.model;
 
 /**
  * Created by pablo on 4/27/16.
@@ -45,5 +45,10 @@ public abstract class GameEntity {
     public int hashCode() {
         int result = getId() != null ? getId().hashCode() : 0;
         return result;
+    }
+
+
+    public boolean isInThatPlace(String place) {
+        return  this.place.equalsIgnoreCase(place);
     }
 }

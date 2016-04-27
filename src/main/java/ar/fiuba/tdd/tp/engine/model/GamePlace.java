@@ -1,4 +1,4 @@
-package ar.fiuba.tdd.tp.engine.conf;
+package ar.fiuba.tdd.tp.engine.model;
 
 
 /**
