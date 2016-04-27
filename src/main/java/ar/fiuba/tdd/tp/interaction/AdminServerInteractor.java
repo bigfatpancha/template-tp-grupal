@@ -3,7 +3,7 @@ package ar.fiuba.tdd.tp.interaction;
 import java.util.Scanner;
 
 /**
- * Created by nahuesosa on 26/04/2016.
+ * Created by Martín on 26/04/2016.
  */
 public class AdminServerInteractor {
 
@@ -33,11 +33,10 @@ public class AdminServerInteractor {
         String[] parsedStr = input.split(" ");
         while (parsedStr.length < 3 || !"load".equals(parsedStr[0]) || !"game".equals(parsedStr[1])) {
             System.out.println("Comando incorrecto. Ingrese <load game [juego]> "
-                    + "para iniciar alguno de los juegos disponibles");
+                    + "para iniciar alguno de los juegos disponibles.");
             input = this.reader.nextLine();
             parsedStr = input.split(" ");
         }
-        
         return parsedStr[2];
     }
 

@@ -47,7 +47,8 @@ public class Engine extends Thread {
             clientSocket = serverSocket.accept();
             inStream = new ObjectInputStream(clientSocket.getInputStream());
             outStream = new ObjectOutputStream(clientSocket.getOutputStream());
-            outStream.writeObject("Welcome to " + gameName);
+            outStream.writeUTF("Welcome to " + gameName);
+            outStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -67,6 +68,7 @@ public class Engine extends Thread {
         while (true) {
             try {
                 String requestMessage = readRequest();
+                System.out.println("Request Message: " + requestMessage + ".");
                 String responseMessage = this.game.processMessage(requestMessage);
                 sendResponse(responseMessage);
             } catch (IOException e) {
@@ -79,12 +81,12 @@ public class Engine extends Thread {
         }
     }
 
-    private String readRequest() throws IOException, ClassNotFoundException {
-        return (String) inStream.readObject();
+    private String readRequest() throws IOException, ClassNotFoundException {return inStream.readUTF();
     }
 
     private void sendResponse(String message) throws IOException {
-        outStream.writeObject("From server: " + message);
+        outStream.writeUTF("From server: " + message);
+        outStream.flush();
     }
 
 }

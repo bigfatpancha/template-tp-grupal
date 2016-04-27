@@ -40,7 +40,7 @@ public abstract class Game {
     }
 
     public String processMessage(String message) {
-        return "Game process" + message;
+        return "Game process:" + message;
     }
 
     public abstract void continueGame();
