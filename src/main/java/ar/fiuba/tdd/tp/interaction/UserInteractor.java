@@ -46,14 +46,6 @@ public class UserInteractor {
     }
 
     public void printControllersGame() {
-        //TODO: en el json ponerle una descripcion con los controles que sean necesarios, lo dejo hardcodeado por ahora
-        System.out.println("Bienvenidos al juego FetchQuest! "
-                +
-                "los controles para el juego son: \n"
-                +
-                "q: look around \n"
-                +
-                "w: pick stick \n");
-
+        System.out.println("Bienvenidos");
     }
 }

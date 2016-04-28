@@ -21,4 +21,9 @@ public class HanoiTower extends Game {
     public void consultGameRules() {
         //T System.out.println("consult Hanoi");
     }
+
+    public String processMessage(String message) {
+        return "Game process:" + message;
+    }
+
 }

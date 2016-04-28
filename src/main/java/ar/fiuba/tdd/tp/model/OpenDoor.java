@@ -23,4 +23,9 @@ public class OpenDoor extends Game {
         //TODO
     }
 
+    public String processMessage(String message) {
+        return "Game process:" + message;
+    }
+
+
 }

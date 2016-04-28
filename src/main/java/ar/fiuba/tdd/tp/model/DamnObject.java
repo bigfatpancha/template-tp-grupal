@@ -22,5 +22,13 @@ public class DamnObject extends Game {
     public void consultGameRules() {
         //TODO
     }
+
+    public String processMessage(String message) {
+
+
+        return "Game process:" + message;
+    }
+
+
 }
 

@@ -17,7 +17,7 @@ public abstract class Game {
 
     }
 
-    public void loadGame(String gameName){
+    public void loadGame(String gameName) {
         try {
             this.gameData = GameConfigurationReader.getInstance().readGameConfiguration(gameName);
         } catch (GameNotFoundException e) {
@@ -45,13 +45,11 @@ public abstract class Game {
         System.out.println(this.lastUserEvent);
     }
 
-    public String processMessage(String message) {
-        return "Game process:" + message;
-    }
-
     public abstract void continueGame();
 
     public abstract void consultGameRules();
+
+    public abstract String processMessage(String message);
 
 
 }
