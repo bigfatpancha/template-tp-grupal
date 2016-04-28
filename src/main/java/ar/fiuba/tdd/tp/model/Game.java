@@ -1,5 +1,7 @@
 package ar.fiuba.tdd.tp.model;
 
+import ar.fiuba.tdd.tp.engine.conf.GameConfigurationReader;
+import ar.fiuba.tdd.tp.engine.conf.GameNotFoundException;
 import ar.fiuba.tdd.tp.engine.model.GameData;
 import ar.fiuba.tdd.tp.interaction.UserInteractor;
 
@@ -11,7 +13,17 @@ public abstract class Game {
     private GameData gameData;
     private String lastUserEvent;
 
-    public Game() { }
+    public Game() {
+
+    }
+
+    public void loadGame(String gameName){
+        try {
+            this.gameData = GameConfigurationReader.getInstance().readGameConfiguration(gameName);
+        } catch (GameNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void setGameData(GameData gameData) {
         this.gameData = gameData;
