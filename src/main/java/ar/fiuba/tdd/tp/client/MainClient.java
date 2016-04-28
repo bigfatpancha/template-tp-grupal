@@ -50,13 +50,18 @@ public class MainClient {
             e.printStackTrace();
         } finally {
             if (client != null) {
-                try {
-                    client.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                client.endClient();
             }
         }
+    }
+
+    private void endClient() {
+        try {
+            this.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private static String askForConnect() {
