@@ -27,7 +27,7 @@ public class Engine extends Thread {
     }
 
     private void loadGame() {
-        this.game.loadRules(this.gameName);
+
     }
 
     public void run() {
@@ -36,7 +36,8 @@ public class Engine extends Thread {
 
         init();
 
-        // this.game.startGame(); FIXME by nahuesosa
+        this.game.startGame(); //FIXME by nahuesosa
+        this.game.continueGame();
         loop();
         close();
         //FIXME by nahuesosa

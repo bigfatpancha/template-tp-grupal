@@ -1,12 +1,14 @@
 package ar.fiuba.tdd.tp.engine.conf;
 
-import ar.fiuba.tdd.tp.engine.model.GameData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import ar.fiuba.tdd.tp.engine.model.GameData;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 
 
 
