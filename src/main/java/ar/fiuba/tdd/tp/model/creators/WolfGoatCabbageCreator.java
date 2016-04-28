@@ -9,6 +9,6 @@ import ar.fiuba.tdd.tp.model.WolfGoatCabbage;
 public class WolfGoatCabbageCreator extends GameCreator {
     @Override
     public Game createGame() {
-        return new WolfGoatCabbage();
+        return null;
     }
 }

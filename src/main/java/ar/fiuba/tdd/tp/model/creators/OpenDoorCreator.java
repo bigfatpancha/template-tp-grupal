@@ -11,6 +11,6 @@ public class OpenDoorCreator extends GameCreator {
     @Override
     public Game createGame() {
 
-        return new OpenDoor();
+        return null;
     }
 }

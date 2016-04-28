@@ -1,5 +1,8 @@
 package ar.fiuba.tdd.tp.model.creators;
 
+import ar.fiuba.tdd.tp.engine.conf.GameConfigurationReader;
+import ar.fiuba.tdd.tp.engine.conf.GameNotFoundException;
+import ar.fiuba.tdd.tp.engine.model.GameData;
 import ar.fiuba.tdd.tp.model.FetchQuestGame;
 import ar.fiuba.tdd.tp.model.Game;
 
@@ -10,7 +13,15 @@ public class FetchQuestCreator extends GameCreator {
 
     @Override
     public Game createGame() {
+        FetchQuestGame game = new FetchQuestGame();
 
-        return new FetchQuestGame();
+        try {
+            GameData gameData = GameConfigurationReader.getInstance().readGameConfiguration(FetchQuestGame.GAME_NAME);
+            game.setGameData(gameData);
+        } catch (GameNotFoundException e) {
+            throw new ar.fiuba.tdd.tp.exceptions.GameNotFoundException(e.getMessage());
+        }
+
+        return game;
     }
 }

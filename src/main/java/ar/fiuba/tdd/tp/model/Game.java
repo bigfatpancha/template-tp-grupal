@@ -13,9 +13,6 @@ public abstract class Game {
     private GameData gameData;
     private String lastUserEvent;
 
-    public Game() {
-
-    }
 
     public void loadGame(String gameName) {
         try {
@@ -25,12 +22,12 @@ public abstract class Game {
         }
     }
 
-    public void setGameData(GameData gameData) {
-        this.gameData = gameData;
-    }
-
     public GameData getGameData() {
         return this.gameData;
+    }
+
+    public void setGameData(GameData gameData) {
+        this.gameData = gameData;
     }
 
 
@@ -45,11 +42,9 @@ public abstract class Game {
         System.out.println(this.lastUserEvent);
     }
 
-    public abstract void continueGame();
-
-    public abstract void consultGameRules();
-
     public abstract String processMessage(String message);
+
+    public abstract boolean isGameOver();
 
 
 }

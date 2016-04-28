@@ -11,6 +11,6 @@ public class HanoiTowerCreator extends GameCreator {
     @Override
     public Game createGame() {
 
-        return new HanoiTower();
+        return null;
     }
 }

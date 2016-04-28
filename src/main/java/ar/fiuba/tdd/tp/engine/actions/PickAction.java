@@ -1,6 +1,5 @@
 package ar.fiuba.tdd.tp.engine.actions;
 
-import ar.fiuba.tdd.tp.engine.actions.Action;
 import ar.fiuba.tdd.tp.engine.model.GameCharacter;
 import ar.fiuba.tdd.tp.engine.model.GameObject;
 import ar.fiuba.tdd.tp.engine.model.GamePlace;
@@ -10,8 +9,14 @@ import ar.fiuba.tdd.tp.engine.model.GamePlace;
  */
 public class PickAction implements Action {
 
-    public void doAction(GamePlace place, GameCharacter character, GameObject object) {
-        character.addObjectToInventory(object.getId());
+    public String doAction(GamePlace place, GameCharacter character, GameObject object) {
+
+        if(object.isActionAllowed("pick")) {
+            character.addObjectToInventory(object.getId());
+            return object.getId() + " picked up from " + place.getId();
+        } else {
+            return "You can not pick up the " + object.getId();
+        }
     }
 
 }
