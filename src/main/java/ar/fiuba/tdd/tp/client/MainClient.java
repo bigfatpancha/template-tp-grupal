@@ -1,10 +1,11 @@
 package ar.fiuba.tdd.tp.client;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Martín on 26/04/2016.
@@ -39,15 +40,22 @@ public class MainClient {
         } catch (NumberFormatException e) {
             port = 5050; // Default Port
         }
-        MainClient client;
+        MainClient client = null;
         try {
             client = new MainClient(port, host);
             client.loop();
-            client.close();
         } catch (UnknownHostException e) {
             System.out.println("No se pudo establecer la conexion con el host: " + host);
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (client != null) {
+                try {
+                    client.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -62,7 +70,6 @@ public class MainClient {
             input = scanner.nextLine();
             parsedInput = input.split(" ");
         }
-        scanner.close();
         return parsedInput[1];
     }
 
@@ -84,16 +91,7 @@ public class MainClient {
     }
 
     private String sendAndReceive() throws IOException {
-        // FIXME by nahuesosa No me toma lo que ingreso por consola y no se xq.
-        /*        while (!scanner.hasNextLine()){ */
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        /*        }
-        String requestMessage = scanner.nextLine(); */
-        String requestMessage = "Mensaje Hardcodeado en Cliente (FIXME)";
+        String requestMessage = scanner.nextLine();
         outStream.writeUTF(requestMessage);
         outStream.flush();
         return inStream.readUTF();
