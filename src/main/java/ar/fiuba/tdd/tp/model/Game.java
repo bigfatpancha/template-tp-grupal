@@ -62,16 +62,19 @@ public abstract class Game {
 
     public String processMessage(String message) {
 
+        //TODO: validar acciones para que no rompa el array
+
         String[] actionObject = message.split(" ");
 
         String actionId = actionObject[0];
         String objectId = actionObject[1];
 
         try {
-            Action action = ActionFactory.getInstance().createAction(this.getActionMap().get(actionId));
             GameData gameData = this.getGameData();
+            Action action = ActionFactory.getInstance().createAction(this.getActionMap().get(actionId));
 
             return action.doAction(gameData.getCurrentPlace(), gameData.getCharacters().get(0), gameData.getObjectById(objectId));
+
         } catch (UnknownActionException e) {
             return "Unknown action";
         }
