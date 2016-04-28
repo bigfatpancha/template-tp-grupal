@@ -12,11 +12,11 @@ public class FactoryGame {
 
         if (gameName.equalsIgnoreCase("fetch_quest")) {
             return new FetchQuestCreator();
-        } else if (gameName.equalsIgnoreCase("abrir_puerta")) {
+        } else if (gameName.equalsIgnoreCase("open_door")) {
             return new OpenDoorCreator();
-        } else if (gameName.equalsIgnoreCase("torres_de_hanoi")) {
+        } else if (gameName.equalsIgnoreCase("hanoi_tower")) {
             return new HanoiTowerCreator();
-        } else if (gameName.equalsIgnoreCase("objeto_maldito")) {
+        } else if (gameName.equalsIgnoreCase("damn_object")) {
             return new DamnObjectCreator();
         } else {
             throw new GameNotFoundException("El juego requerido no se encuentra implementado.");
