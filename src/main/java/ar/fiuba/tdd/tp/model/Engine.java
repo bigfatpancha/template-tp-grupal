@@ -66,15 +66,16 @@ public class Engine extends Thread {
     private void loop() {
         while (true) {
             try {
-                if (this.game.isGameOver()) {
-                    //TODO: pasa algo asincronico aca y el cliente no se esta cerrando ni enviando you win
-                    System.out.println("Request Message: " + "you win" + ".");
-                    sendResponse("You win!!");
-                    break;
-                }
                 String requestMessage = readRequest();
                 System.out.println("Request Message: " + requestMessage + ".");
                 String responseMessage = this.game.processMessage(requestMessage);
+
+                if (this.game.isGameOver()) {
+                    responseMessage += "\nYou win!!";
+                    sendResponse(responseMessage);
+                    break;
+                }
+
                 sendResponse(responseMessage);
 
             } catch (IOException e) {

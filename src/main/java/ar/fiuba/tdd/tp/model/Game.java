@@ -63,7 +63,11 @@ public abstract class Game {
 
     public String processMessage(String message) {
 
-        //TODO: validar acciones para que no rompa el array
+        String[] parsedStr = message.split(" ");
+        while (parsedStr.length != 2) {
+            return "Comando incorrecto. Ingrese una accion o ingrese help <juego> "
+                    + "para obtener la ayuda del juego.";
+        }
 
         String[] actionObject = message.split(" ");
 
