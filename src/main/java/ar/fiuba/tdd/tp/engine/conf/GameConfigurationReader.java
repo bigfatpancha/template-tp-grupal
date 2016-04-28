@@ -1,9 +1,8 @@
 package ar.fiuba.tdd.tp.engine.conf;
 
+import ar.fiuba.tdd.tp.engine.model.GameData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import ar.fiuba.tdd.tp.engine.model.Game;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,7 +29,7 @@ public class GameConfigurationReader {
     }
 
 
-    public Game readGameConfiguration(String gameName) throws GameNotFoundException {
+    public GameData readGameConfiguration(String gameName) throws GameNotFoundException {
         Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
 
         try {
@@ -39,7 +38,7 @@ public class GameConfigurationReader {
 
             InputStreamReader jsonFile = new InputStreamReader(new FileInputStream(path), "UTF-8");
 
-            Game game = gson.fromJson(jsonFile, Game.class);
+            GameData game = gson.fromJson(jsonFile, GameData.class);
             System.out.println("Configuracion del juego \'" + gameName + "\' leida exitosamente!");
 
             return game;

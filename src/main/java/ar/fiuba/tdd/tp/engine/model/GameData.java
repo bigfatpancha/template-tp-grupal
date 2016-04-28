@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by pablo on 4/25/16.
  */
-public class Game {
+public class GameData {
 
     private String gameName;
 
@@ -17,7 +17,7 @@ public class Game {
     private List<GameObject> objects;
 
 
-    public Game() {
+    public GameData() {
         this.gameName = "";
         this.places = new ArrayList<GamePlace>();
         this.characters = new ArrayList<GameCharacter>();

@@ -8,11 +8,6 @@ public class HanoiTower extends Game {
         super();
     }
 
-    @Override
-    public Game loadRules(String gameName) {
-        return super.loadRules(gameName);
-    }
-
     /*
     @Override
     public String processMessage(String message) {
@@ -20,7 +15,7 @@ public class HanoiTower extends Game {
     } */
 
     public void continueGame() {
-        System.out.println("continue Game Hanoi");
+        System.out.println("continue GameData Hanoi");
     }
 
     public void consultGameRules() {

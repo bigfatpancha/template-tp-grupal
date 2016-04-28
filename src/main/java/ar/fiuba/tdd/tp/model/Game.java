@@ -1,5 +1,6 @@
 package ar.fiuba.tdd.tp.model;
 
+import ar.fiuba.tdd.tp.engine.model.GameData;
 import ar.fiuba.tdd.tp.interaction.UserInteractor;
 
 /**
@@ -7,26 +8,19 @@ import ar.fiuba.tdd.tp.interaction.UserInteractor;
  */
 public abstract class Game {
 
-    private GameRules gameRules;
+    private GameData gameData;
     private String lastUserEvent;
 
-    public Game() {
-        this.gameRules = new GameRules();
+    public Game() { }
 
+    public void setGameData(GameData gameData) {
+        this.gameData = gameData;
     }
 
-    public void setGameRules(GameRules gameRules) {
-        this.gameRules = gameRules;
+    public GameData getGameData() {
+        return this.gameData;
     }
 
-    public GameRules getGameRules() {
-        return this.gameRules;
-    }
-
-    public Game loadRules(String gameName) {
-        this.gameRules.load(gameName);
-        return this;
-    }
 
     public void giveFirstMessage() {
         UserInteractor interacter = UserInteractor.getInstance();
