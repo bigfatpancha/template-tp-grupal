@@ -77,6 +77,12 @@ public abstract class Game {
         try {
             GameData gameData = this.getGameData();
 
+            /* Caso particular para muestro ayuda */
+            if (actionId.equals("help")) {
+                UserInteractor interacter = UserInteractor.getInstance();
+                return interacter.handleHelpInteraction(objectId);
+            }
+
             /* Caso particular para look around */
             if (actionObject[0].equals("look") &&  actionObject[1].equals("around")) {
                 LookAroundAction lookAround = new LookAroundAction();

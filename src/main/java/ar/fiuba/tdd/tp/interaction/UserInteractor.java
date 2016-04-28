@@ -22,21 +22,25 @@ public class UserInteractor {
     }
 
 
-    public void handleClientInteraction() {
-        String input = this.reader.nextLine();
-
-        if (input.equals("exit game")) {
-            return;
+    public String handleHelpInteraction(String gameName) {
+        if ( gameName.equals("fetch_quest") ) {
+            return "Fetch_quest help:"
+                    +
+                "\nwrite exit to go out of the game"
+                    +
+                "\nto play yo can do two things:"
+                    +
+                "\nwrite look around: to look which objects do you have in a place"
+                    +
+                "\nwrit pick + object: to pick an objeck"
+                    +
+                "\ngood luck!";
         }
 
-        if (input.equals("help")) {
-
-            //TODO: Mostrar ayuda del juego
-            System.out.println("Game helper");
-            return;
-
-        }
+        return "We are sorry, that game is not available in this server";
     }
+
+
 
     public String handleUserEvent() {
         System.out.println("Esperando al control de usuario");
