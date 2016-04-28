@@ -3,7 +3,7 @@ package ar.fiuba.tdd.tp.model;
 /**
  * Created by samiloiza on 25/04/16.
  */
-public class OpenDoor {
+public class OpenDoor extends Game {
 
     public OpenDoor() {
         super();
@@ -21,6 +21,11 @@ public class OpenDoor {
 
     public void consultGameRules() {
         //TODO
+    }
+
+    @Override
+    public boolean isGameOver() {
+        return false;
     }
 
     public String processMessage(String message) {

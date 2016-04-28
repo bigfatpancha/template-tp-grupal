@@ -40,8 +40,8 @@ public class FetchQuestGame extends Game {
         return this.getGameData().getCharacters().get(0).isObjectInInventory("stick");
     }
 
-    public String processMessage(String message) {
+   /* public String processMessage(String message) {
         return "Game process:" + message;
-    }
+    }*/
 
 }

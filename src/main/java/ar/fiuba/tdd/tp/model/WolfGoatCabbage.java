@@ -9,14 +9,13 @@ public class WolfGoatCabbage extends Game {
     }
 
 
-    @Override
-    public void continueGame() {
+    public void consultGameRules() {
         //TODO
     }
 
     @Override
-    public void consultGameRules() {
-        //TODO
+    public boolean isGameOver() {
+        return false;
     }
 
     public String processMessage(String message) {

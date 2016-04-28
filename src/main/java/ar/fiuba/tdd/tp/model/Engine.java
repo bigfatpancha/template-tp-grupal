@@ -36,9 +36,9 @@ public class Engine extends Thread {
 
         init();
 
-        this.game.loadGame(this.gameName);
+        /*this.game.loadGame(this.gameName);
         this.game.startGame(); //FIXME by nahuesosa
-        this.game.processMessage("");
+        this.game.processMessage("");*/
         loop();
         close();
         //FIXME by nahuesosa

@@ -13,10 +13,10 @@ public class MoveAction implements Action {
 
         String moveResponse = "";
 
-        if(object != null) {
+        if (object != null) {
             object.setPlace(place.getId());
             moveResponse = object.getId() + " moved to " + place.getId();
-        } else if(character != null) {
+        } else if (character != null) {
             character.setPlace(place.getId());
             moveResponse = character.getId() + " went to " + place.getId();
         }

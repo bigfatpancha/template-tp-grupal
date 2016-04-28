@@ -11,7 +11,7 @@ public class PickAction implements Action {
 
     public String doAction(GamePlace place, GameCharacter character, GameObject object) {
 
-        if(object.isActionAllowed("pick")) {
+        if (object.isActionAllowed("pick")) {
             character.addObjectToInventory(object.getId());
             return object.getId() + " picked up from " + place.getId();
         } else {
