@@ -18,6 +18,8 @@ public class FactoryGame {
             return new HanoiTowerCreator();
         } else if (gameName.equalsIgnoreCase("damn_object")) {
             return new DamnObjectCreator();
+        } else if (gameName.equalsIgnoreCase("wolf_goat_cabbage")) {
+            return new WolfGoatCabbageCreator();
         } else {
             throw new GameNotFoundException("El juego requerido no se encuentra implementado.");
         }
