@@ -64,7 +64,7 @@ public abstract class Game {
     public String processMessage(String message) {
 
         String[] parsedStr = message.split(" ");
-        while (parsedStr.length != 2) {
+        if (parsedStr.length != 2) {
             return "Comando incorrecto. Ingrese una accion o ingrese help <juego> "
                     + "para obtener la ayuda del juego.";
         }
@@ -74,27 +74,55 @@ public abstract class Game {
         String actionId = actionObject[0];
         String objectId = actionObject[1];
 
+
+        String commonEvents = this.checkCommonEvents(actionId,objectId);
+        if (commonEvents != null) {
+            return commonEvents;
+        }
+
+        return processToAction(actionId,objectId);
+    }
+
+    private  String checkCommonEvents(String actionId,String objectId) {
+        String helpString = this.processHelp(actionId,objectId);
+        if (helpString != null) {
+            return helpString;
+        }
+
+        String exitString = this.processExitGame(actionId,objectId);
+        if (exitString != null) {
+            return exitString;
+        }
+        return null;
+    }
+
+    private String processHelp(String actionId,String objectId) {
+        /* Caso particular para muestro ayuda */
+        if (actionId.equals("help")) {
+            UserInteractor interacter = UserInteractor.getInstance();
+            return interacter.handleHelpInteraction(objectId);
+        }
+        return null;
+    }
+
+    private String processExitGame(String actionId,String objectId) {
+        /* Caso particular para salir del juego */
+        if (actionId.equals("exit") && objectId.equals("game")) {
+            return actionId + " " + objectId;
+        }
+        return null;
+    }
+
+    private String processToAction(String actionId,String objectId) {
+        GameData gameData = this.getGameData();
+
+        /* Caso particular para look around */
+        if (actionId.equals("look") &&  objectId.equals("around")) {
+            LookAroundAction lookAround = new LookAroundAction();
+            return lookAround.doAction(this.getGameData().getObjects());
+        }
+
         try {
-
-            /* Caso particular para muestro ayuda */
-            if (actionId.equals("help")) {
-                UserInteractor interacter = UserInteractor.getInstance();
-                return interacter.handleHelpInteraction(objectId);
-            }
-
-            /* Caso particular para salir del juego */
-            if (actionId.equals("exit") && objectId.equals("game")) {
-                return message;
-            }
-
-            GameData gameData = this.getGameData();
-
-            /* Caso particular para look around */
-            if (actionObject[0].equals("look") &&  actionObject[1].equals("around")) {
-                LookAroundAction lookAround = new LookAroundAction();
-                return lookAround.doAction(this.getGameData().getObjects());
-            }
-
             Action action = ActionFactory.getInstance().createAction(this.getActionMap().get(actionId));
             return action.doAction(gameData.getCurrentPlace(), gameData.getCharacters().get(0), gameData.getObjectById(objectId));
 
@@ -104,6 +132,5 @@ public abstract class Game {
     }
 
     public abstract boolean isGameOver();
-
 
 }
