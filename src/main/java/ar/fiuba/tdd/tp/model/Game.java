@@ -75,13 +75,19 @@ public abstract class Game {
         String objectId = actionObject[1];
 
         try {
-            GameData gameData = this.getGameData();
 
             /* Caso particular para muestro ayuda */
             if (actionId.equals("help")) {
                 UserInteractor interacter = UserInteractor.getInstance();
                 return interacter.handleHelpInteraction(objectId);
             }
+
+            /* Caso particular para salir del juego */
+            if (actionId.equals("exit") && objectId.equals("game")) {
+                return message;
+            }
+
+            GameData gameData = this.getGameData();
 
             /* Caso particular para look around */
             if (actionObject[0].equals("look") &&  actionObject[1].equals("around")) {

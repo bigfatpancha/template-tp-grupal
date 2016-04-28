@@ -84,6 +84,10 @@ public class MainClient {
         while (true) {
             String responseMessage = sendAndReceive();
             System.out.println(responseMessage);
+            if (responseMessage.contains("exit game")) {
+                break;
+            }
+
             if (responseMessage.contains("You win!!")) {
                 break;
             }

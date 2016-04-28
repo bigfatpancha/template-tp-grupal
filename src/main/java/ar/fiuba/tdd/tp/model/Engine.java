@@ -76,6 +76,11 @@ public class Engine extends Thread {
                     break;
                 }
 
+                if (responseMessage.equals("exit game")) {
+                    sendResponse(responseMessage);
+                    break;
+                }
+
                 sendResponse(responseMessage);
 
             } catch (IOException e) {
