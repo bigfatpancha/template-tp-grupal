@@ -1,0 +1,26 @@
+{
+  "id": "fetch_quest",
+  "currentPlace": "room1",
+  "places" : [
+    {
+      "id": "room1"
+    }
+  ],
+  "objects" : [
+    {
+      "id": "stick",
+      "place" : "room1",
+      "actions" : [
+        "pick"
+      ]
+    }
+  ],
+  "characters" : [
+    {
+      "id": "me",
+      "place" : "room1"
+    }
+  ]
+
+
+}

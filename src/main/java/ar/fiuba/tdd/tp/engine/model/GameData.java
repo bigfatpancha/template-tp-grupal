@@ -10,6 +10,8 @@ public class GameData {
 
     private String gameName;
 
+    private String currentPlace;
+
     private List<GamePlace> places;
 
     private List<GameCharacter> characters;
@@ -57,5 +59,42 @@ public class GameData {
     }
 
 
+    public GamePlace getCurrentPlace() {
+        GamePlace gamePlace = null;
+
+        for(GamePlace place : this.places) {
+            if (this.currentPlace.equalsIgnoreCase(place.getId())) {
+                gamePlace = place;
+            }
+        }
+
+        return gamePlace;
+    }
+
+    public List<GameObject> getObjectsInActualPlace(String placeId) {
+
+        List<GameObject> gameObjectsInPlace = new ArrayList<GameObject>();
+
+        for(GameObject gameObject : this.objects) {
+            if (gameObject.getPlace().equalsIgnoreCase(placeId)) {
+                gameObjectsInPlace.add(gameObject);
+            }
+        }
+
+        return gameObjectsInPlace;
+     }
+
+
+    public GameObject getObjectById(String objectId) {
+        GameObject object = null;
+
+        for(GameObject gameObject : this.objects) {
+            if (gameObject.getId().equalsIgnoreCase(objectId)) {
+                object = gameObject;
+            }
+        }
+
+        return object;
+    }
 
 }

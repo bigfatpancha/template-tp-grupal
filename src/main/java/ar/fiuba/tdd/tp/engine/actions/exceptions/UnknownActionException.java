@@ -1,4 +1,4 @@
-package ar.fiuba.tdd.tp.engine.actions;
+package ar.fiuba.tdd.tp.engine.actions.exceptions;
 
 /**
  * Created by pablo on 4/28/16.
@@ -6,6 +6,6 @@ package ar.fiuba.tdd.tp.engine.actions;
 public class UnknownActionException extends Exception {
 
     public UnknownActionException(String actionId) {
-        super("La accion " + actionId + " es desconocida");
+        super(actionId + " is unknown!");
     }
 }
