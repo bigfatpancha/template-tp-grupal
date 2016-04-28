@@ -3,7 +3,7 @@ package ar.fiuba.tdd.tp.model;
 /**
  * Created by samiloiza on 25/04/16.
  */
-public class HanoiTower {
+public class HanoiTower extends Game {
     public HanoiTower() {
         super();
     }
@@ -24,6 +24,11 @@ public class HanoiTower {
 
     public String processMessage(String message) {
         return "Game process:" + message;
+    }
+
+    @Override
+    public boolean isGameOver() {
+        return false;
     }
 
 }
