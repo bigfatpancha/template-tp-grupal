@@ -11,6 +11,6 @@ public class DamnObjectCreator extends GameCreator {
 
     public Game createGame() {
 
-        return null;
+        return new DamnObject();
     }
 }

@@ -1,15 +1,17 @@
 package ar.fiuba.tdd.tp.engine.actions.factory;
 
 
-import ar.fiuba.tdd.tp.engine.actions.Action;
-import ar.fiuba.tdd.tp.engine.actions.MoveAction;
-import ar.fiuba.tdd.tp.engine.actions.PickAction;
+import ar.fiuba.tdd.tp.engine.actions.*;
 import ar.fiuba.tdd.tp.engine.actions.exceptions.UnknownActionException;
 
 /**
  * Created by pablo on 4/28/16.
  */
 public class ActionFactory {
+
+    public enum ActionType {
+        move, pick, look_around, open
+    }
 
     private static ActionFactory instance;
 
@@ -25,14 +27,19 @@ public class ActionFactory {
     }
 
 
-    public Action createAction(String actionId) throws UnknownActionException {
+    public Action createAction(ActionType actionId) throws UnknownActionException {
 
-        if (actionId.equalsIgnoreCase("move")) {
-            return new MoveAction();
-        } else if (actionId.equalsIgnoreCase("pick")) {
-            return new PickAction();
-        } else {
-            throw new UnknownActionException(actionId);
+        switch (actionId) {
+            case move :
+                return new MoveAction();
+            case pick :
+                return new PickAction();
+            case look_around :
+                return new LookAroundAction();
+            case open :
+                return new OpenDoorAction();
+            default :
+                throw new UnknownActionException(actionId.name());
         }
 
     }

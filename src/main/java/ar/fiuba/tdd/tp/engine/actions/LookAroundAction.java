@@ -7,10 +7,10 @@ import ar.fiuba.tdd.tp.engine.model.GamePlace;
 /**
  * Created by pablo on 4/28/16.
  */
-public class LookAroundAction {
+public class LookAroundAction implements Action {
 
-    public void doAction(GamePlace place, GameCharacter character, GameObject object) {
-        // TODO implementar
+    public String doAction(GamePlace place, GameCharacter character, GameObject object) {
+        return "There's a damn_object in the " + place.getId();
     }
 
 }

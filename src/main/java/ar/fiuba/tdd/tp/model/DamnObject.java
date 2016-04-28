@@ -1,34 +1,23 @@
 package ar.fiuba.tdd.tp.model;
 
+import ar.fiuba.tdd.tp.engine.actions.Action;
+import ar.fiuba.tdd.tp.engine.actions.exceptions.UnknownActionException;
+import ar.fiuba.tdd.tp.engine.actions.factory.ActionFactory;
+import ar.fiuba.tdd.tp.engine.model.GameData;
+
 /**
  * Created by samiloiza on 25/04/16.
  */
-public class DamnObject {
+public class DamnObject extends Game {
+
     public DamnObject() {
         super();
     }
 
-    /*
     @Override
-    public String processMessage(String message) {
-        return "DamnObject:" + message;
-    }
-    */
-
-    public void continueGame() {
+    public boolean isGameOver() {
         //TODO
+        return false;
     }
-
-    public void consultGameRules() {
-        //TODO
-    }
-
-    public String processMessage(String message) {
-
-
-        return "Game process:" + message;
-    }
-
 
 }
-

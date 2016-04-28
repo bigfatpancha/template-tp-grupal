@@ -19,29 +19,8 @@ public class FetchQuestGame extends Game {
         super();
     }
 
-    public String processMessage(String message) {
-
-        String[] actionObject = message.split(" ");
-
-        String actionId = actionObject[0];
-        String objectId = actionObject[1];
-
-        try {
-            Action action = ActionFactory.getInstance().createAction(actionId);
-            GameData gameData = this.getGameData();
-
-            return action.doAction(gameData.getCurrentPlace(), gameData.getCharacters().get(0), gameData.getObjectById(objectId));
-        } catch (UnknownActionException e) {
-            return "Unknown action";
-        }
-    }
-
     public boolean isGameOver() {
         return this.getGameData().getCharacters().get(0).isObjectInInventory("stick");
     }
-
-   /* public String processMessage(String message) {
-        return "Game process:" + message;
-    }*/
 
 }

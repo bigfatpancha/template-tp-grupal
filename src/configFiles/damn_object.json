@@ -1,12 +1,20 @@
 {
-  "id": "OpenDoor",
-
+  "id": "damn_object",
+  "currentPlace": "room1",
   "places" : [
     {
-      "id": "room1"
+      "id": "room1",
+      "objects": [
+        "damn_object",
+        "door1"
+      ]
     },
     {
-      "id": "room2"
+      "id": "room2",
+      "objects": [
+        "thief",
+        "door2"
+      ]
     },
     {
       "id": "room3"
@@ -14,21 +22,29 @@
   ],
   "objects" : [
     {
-      "id": "key",
-      "actions" : [
+      "id": "damn_object",
+      "place": "room1",
+      "actions": [
         "pick",
-        "drop"
+        "get_stolen"
       ]
     },
     {
-      "id": "door",
+      "id": "door1",
+      "place": "room1",
       "actions" : [
         "open",
         "close"
       ]
     },
     {
-      "id": "box",
+      "id": "thief",
+      "place": "room2",
+      "action": "talk"
+    },
+    {
+      "id": "door2",
+      "place": "room2",
       "actions" : [
         "open",
         "close"
@@ -37,9 +53,8 @@
   ],
   "characters" : [
     {
-      "id": "me"
+      "id": "me",
+      "place": "room1"
     }
   ]
-
-
 }
