@@ -1,6 +1,7 @@
 package ar.fiuba.tdd.tp.model;
 
 import ar.fiuba.tdd.tp.engine.actions.Action;
+import ar.fiuba.tdd.tp.engine.actions.LookAroundAction;
 import ar.fiuba.tdd.tp.engine.actions.exceptions.UnknownActionException;
 import ar.fiuba.tdd.tp.engine.actions.factory.ActionFactory;
 import ar.fiuba.tdd.tp.engine.conf.GameConfigurationReader;
@@ -71,8 +72,14 @@ public abstract class Game {
 
         try {
             GameData gameData = this.getGameData();
-            Action action = ActionFactory.getInstance().createAction(this.getActionMap().get(actionId));
 
+            /* Caso particular para look around */
+            if (actionObject[0].equals("look") &&  actionObject[1].equals("around")) {
+                LookAroundAction lookAround = new LookAroundAction();
+                return lookAround.doAction(this.getGameData().getObjects());
+            }
+
+            Action action = ActionFactory.getInstance().createAction(this.getActionMap().get(actionId));
             return action.doAction(gameData.getCurrentPlace(), gameData.getCharacters().get(0), gameData.getObjectById(objectId));
 
         } catch (UnknownActionException e) {

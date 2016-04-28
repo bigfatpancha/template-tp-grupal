@@ -28,14 +28,11 @@ public class ActionFactory {
 
 
     public Action createAction(ActionType actionId) throws UnknownActionException {
-
         switch (actionId) {
             case move :
                 return new MoveAction();
             case pick :
                 return new PickAction();
-            case look_around :
-                return new LookAroundAction();
             case open :
                 return new OpenDoorAction();
             default :
