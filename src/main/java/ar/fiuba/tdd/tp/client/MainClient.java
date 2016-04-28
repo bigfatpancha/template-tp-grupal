@@ -84,7 +84,7 @@ public class MainClient {
         while (true) {
             String responseMessage = sendAndReceive();
             System.out.println(responseMessage);
-            if ("bye!".equalsIgnoreCase(responseMessage)) {
+            if ("You win!!".equalsIgnoreCase(responseMessage)) {
                 break;
             }
         }
