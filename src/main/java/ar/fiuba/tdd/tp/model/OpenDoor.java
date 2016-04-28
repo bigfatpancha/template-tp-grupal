@@ -9,11 +9,6 @@ public class OpenDoor extends Game {
         super();
     }
 
-    @Override
-    public Game loadRules(String gameName) {
-        return super.loadRules(gameName);
-
-    }
 
 /*    @Override
     public String processMessage(String message) {
